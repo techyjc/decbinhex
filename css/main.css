@@ -1,0 +1,111 @@
+.reference-table-wrapper {
+    border-left: 2px solid var(--primary-site-col);
+    border-right: 2px solid var(--primary-site-col);
+    border-bottom: 2px solid var(--primary-site-col);
+    padding-inline: 5px;
+    padding-block: 5px;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+}
+
+.decbinhex-ref-table {
+    border-collapse: collapse;
+    border: 1px solid darkgrey;
+    min-width: 1024px;
+    margin: 0px auto;
+}
+
+[data-type] {
+    border: 1px solid darkgrey;
+    text-align: center;
+    padding: 5px;
+    width: 40px;
+}
+
+[data-type]:first-of-type {
+    font-weight: bold;
+    text-align: left;
+    width: 60px;
+}
+
+.challenge-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.challenge-value {
+    align-items: center;
+    background-color: var(--primary-site-col);
+    border-radius: 10px;
+    color: var(--inverse-text-col);
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    height: 50px;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 120px;
+}
+
+.challenge-desc {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.challenge-opt {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.new-challenge-btn {
+    background-color: var(--primary-site-col);
+    border: none;
+    border-radius: 10px;
+    color: var(--inverse-text-col);
+    min-width: 120px;
+    min-height: 40px;
+}
+
+.new-challenge-btn:hover {
+    background-color: var(--btn-hover-col);
+}
+
+.octet {
+    background-color: #ffd500;
+    border-radius: 10px;
+    min-width: 640px;
+    padding: 5px;
+}
+
+.octet-labels {
+    display: flex;
+}
+
+.bit-label {
+    font-size: 1.4rem;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    width: 100%;
+    min-width: 80px;
+}
+
+.octet-entry {
+    display: flex;
+}
+
+.bin-entry {
+    border: 2px solid #ffd500;
+    border-radius: 5px;
+    display: block;
+    font-size: 1.4rem;
+    height: 100%;
+    outline: transparent;
+    text-align: center;
+    width: 100%;
+}

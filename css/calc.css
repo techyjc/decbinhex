@@ -1,0 +1,183 @@
+/* Calculator */
+
+.calculator {
+    background-color: rgb(24, 24, 24);
+    border: 2px solid rgb(42, 42, 42);
+    border-radius: 25px 25px 10px 10px;
+    box-shadow: 0 3px 4px 1px #676767;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem auto;
+    width: 270px;
+    padding: 0.5rem;
+}
+
+.calc-display {
+    background-color: rgb(255, 255, 202);
+    border-radius: 20px;
+    font-size: 1.6rem;
+    height: 40px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-inline: 15px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.calc-buttons {
+    display: grid;;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "number9"
+        "number8"
+        "number7"
+        "number6"
+        "number5"
+        "number4"
+        "number3"
+        "number2"
+        "number1"
+        "number0"
+        "function-add"
+        "function-sub"
+        "function-div"
+        "function-mul"
+        "function-dec"
+        "function-eq"
+        "function-clr"
+        "blank";
+    grid-template-areas:
+        "blank blank blank function-clr"
+        "number9 number8 number7 function-add"
+        "number6 number5 number4 function-sub"
+        "number3 number2 number1 function-div"
+        "number0 function-dec function-eq function-mul";
+}
+
+.calc-btn, .calc-div {
+    background-color: rgb(42, 42, 42);
+    color: var(--inverse-text-col);
+    font-size: 1.4rem;
+    margin: 2px;
+}
+
+.btn-num9 {
+    grid-area: number9;
+}
+
+.btn-num8 {
+    grid-area: number8;
+}
+
+.btn-num7 {
+    grid-area: number7;
+}
+
+.btn-num6 {
+    grid-area: number6;
+}
+
+.btn-num5 {
+    grid-area: number5;
+}
+
+.btn-num4 {
+    grid-area: number4;
+}
+
+.btn-num3 {
+    grid-area: number3;
+}
+
+.btn-num2 {
+    grid-area: number2;
+}
+
+.btn-num1 {
+    grid-area: number1;
+}
+
+.btn-num0 {
+    grid-area: number0;
+}
+
+.btn-add {
+    grid-area: function-add;
+}
+
+.btn-sub {
+    grid-area: function-sub;
+}
+
+.btn-div {
+    grid-area: function-div;
+}
+
+.btn-mul {
+    grid-area: function-mul;
+}
+
+.btn-eq {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    grid-area: function-eq;
+}
+
+.btn-clr {
+    grid-area: function-clr;
+}
+
+.btn-bln {
+    font-size: 0.9rem;
+    grid-area: blank;
+}
+
+.calc-funct {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.calc-btn:hover, .btn-eq {
+    background-color: orange;
+    color: black;
+}
+
+
+/* Calculator Log */
+
+.calc_sum_log .loghead {
+    background-color: var(--primary-site-col);
+    color:#fff;
+    font-size: 1rem;
+    margin: 0px;
+    padding: 5px;
+    position: sticky;
+    text-align: center;
+    top: 0;
+}
+
+.calc_sum_log {
+    background-color: #ffffca;
+    border: 2px solid lightgreen;
+    bottom: 0px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    margin: 1rem auto;
+    min-height: 150px;
+    position: relative;
+    /* overflow-y: scroll; */
+    width: 300px;
+}
+
+.calc_sum_log span {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+}
+
+
+.calc_sum_log span:hover {
+    background-color: lightgreen;
+}

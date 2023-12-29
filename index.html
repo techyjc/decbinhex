@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/calc.css">
+    <script src="js/base.js" defer></script>
+</head>
+<body>        
+    <header>
+        <h1 class="main-heading">Decimal | Binary | Hexidecimal</h1>
+    </header>  
+    <main class="content-wrapper">
+        <div class="binary-convert">
+
+            <div class="reference-table-wrapper">
+                    <table class="decbinhex-ref-table">
+                        <caption>Decimal - Binary - Hexidecimal Reference</caption>
+                        <tr class="decimal-ref-row">
+                            <th data-type="decimal">Base 10</th>
+                            <th data-type="decimal">0</th>
+                            <th data-type="decimal">1</th>
+                            <th data-type="decimal">2</th>
+                            <th data-type="decimal">3</th>
+                            <th data-type="decimal">4</th>
+                            <th data-type="decimal">5</th>
+                            <th data-type="decimal">6</th>
+                            <th data-type="decimal">7</th>
+                            <th data-type="decimal">8</th>
+                            <th data-type="decimal">9</th>
+                            <th data-type="decimal">10</th>
+                            <th data-type="decimal">11</th>
+                            <th data-type="decimal">12</th>
+                            <th data-type="decimal">13</th>
+                            <th data-type="decimal">14</th>
+                            <th data-type="decimal">15</th>
+                        </tr>
+                        <tr class="binary-ref-row">
+                            <td data-type="binary">Base 2</td>
+                            <td data-type="binary">0000</td>
+                            <td data-type="binary">0001</td>
+                            <td data-type="binary">0010</td>
+                            <td data-type="binary">0011</td>
+                            <td data-type="binary">0100</td>
+                            <td data-type="binary">0101</td>
+                            <td data-type="binary">0110</td>
+                            <td data-type="binary">0111</td>
+                            <td data-type="binary">1000</td>
+                            <td data-type="binary">1001</td>
+                            <td data-type="binary">1010</td>
+                            <td data-type="binary">1011</td>
+                            <td data-type="binary">1100</td>
+                            <td data-type="binary">1101</td>
+                            <td data-type="binary">1110</td>
+                            <td data-type="binary">1111</td>
+                        </tr>
+                        <tr class="hexdec-ref-row">
+                            <td data-type="hexidecimal">Base 16</td>
+                            <td data-type="hexidecimal">0</td>
+                            <td data-type="hexidecimal">1</td>
+                            <td data-type="hexidecimal">2</td>
+                            <td data-type="hexidecimal">3</td>
+                            <td data-type="hexidecimal">4</td>
+                            <td data-type="hexidecimal">5</td>
+                            <td data-type="hexidecimal">6</td>
+                            <td data-type="hexidecimal">7</td>
+                            <td data-type="hexidecimal">8</td>
+                            <td data-type="hexidecimal">9</td>
+                            <td data-type="hexidecimal">A</td>
+                            <td data-type="hexidecimal">B</td>
+                            <td data-type="hexidecimal">C</td>
+                            <td data-type="hexidecimal">D</td>
+                            <td data-type="hexidecimal">E</td>
+                            <td data-type="hexidecimal">F</td>
+                        </tr>
+                    </table>
+            </div>
+
+            <div class="challenge-wrapper">
+                <div class="challenge-value">
+                    <span class="dec-value">23</span>
+                </div>
+                <div class="challenge-desc">
+                    <span class="dec-desc">Convert this Decimal Value to Hexidecimal</span>
+                </div>
+                <div class="challenge-opt">
+                    <button class="new-challenge-btn">New Challenge</button>
+                </div>
+            </div>
+
+            <div class="octet">
+                <div class="octet-labels">
+                    <div class="bit-label bit-128">128</div>
+                    <div class="bit-label bit-64">64</div>
+                    <div class="bit-label bit-32">32</div>
+                    <div class="bit-label bit-16">16</div>
+                    <div class="bit-label bit-8">8</div>
+                    <div class="bit-label bit-4">4</div>
+                    <div class="bit-label bit-2">2</div>
+                    <div class="bit-label bit-1">1</div>
+                </div>
+
+                <div class="octet-entry">
+                    <input type="text" class="bin-entry bin-128" value="0">
+                    <input type="text" class="bin-entry bin-64" value="0">
+                    <input type="text" class="bin-entry bin-32" value="0">
+                    <input type="text" class="bin-entry bin-16" value="0">
+                    <input type="text" class="bin-entry bin-8" value="0">
+                    <input type="text" class="bin-entry bin-4" value="0">
+                    <input type="text" class="bin-entry bin-2" value="0">
+                    <input type="text" class="bin-entry bin-1" value="0">
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="convert-side">
+            <div class="calculator">
+                <div class="calc-display">0</div>
+                <div class="calc-buttons">
+                    <div class="calc-div calc-num btn-bln">It doesn't add up!</div>
+                    <button class="calc-btn calc-funct btn-clr" value="clear">C</button>
+                    <button class="calc-btn calc-num btn-num9" value="9">9</button>
+                    <button class="calc-btn calc-num btn-num8" value="8">8</button>
+                    <button class="calc-btn calc-num btn-num7" value="7">7</button>
+                    <button class="calc-btn calc-num btn-num6" value="6">6</button>
+                    <button class="calc-btn calc-num btn-num5" value="5">5</button>
+                    <button class="calc-btn calc-num btn-num4" value="4" >4</button>
+                    <button class="calc-btn calc-num btn-num3" value="3">3</button>
+                    <button class="calc-btn calc-num btn-num2" value="2">2</button>
+                    <button class="calc-btn calc-num btn-num1" value="1">1</button>
+                    <button class="calc-btn calc-num btn-num0" value="0">0</button>
+                    <button class="calc-btn calc-funct btn-dec" value=".">.</button>
+                    <button class="calc-btn calc-funct btn-eq" value="=">=</button>
+                    <button class="calc-btn calc-funct btn-add" value="+">+</button>
+                    <button class="calc-btn calc-funct btn-sub" value="-">&#8211;</button>
+                    <button class="calc-btn calc-funct btn-div" value="/">/</button>
+                    <button class="calc-btn calc-funct btn-mul" value="*">x</button>
+                </div>
+            </div>
+            <div class="calc_sum_log">
+            <p class="loghead">Calculator Log</p>
+            </div>
+        </aside>
+
+    </main>
+    <footer>
+        <p class="footer-text">
+            Copyright <span class="year-text">2024</span>.
+        </p>
+    </footer>
+</body>
+</html>
