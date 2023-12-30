@@ -13,12 +13,16 @@
     <header>
         <h1 class="main-heading">Decimal | Binary | Hexidecimal</h1>
     </header>  
-    <main class="content-wrapper">
-        <div class="binary-convert">
+    <main class="content-wrapper"> <!-- Content Wrapper -->
+        <div class="binary-convert"> <!-- Binary Convert -->
 
-            <div class="reference-table-wrapper">
+            <div class="conv-table-wrapper"> <!-- Convert Table Wrapper -->
+            
+                <div class="reference-table-wrapper"> <!-- Reference Table Wrapper -->
+                    <label for="cnv-opt" class="cnv-btn"> Show Conversion Table</label>
+                    <input type="checkbox" name="cnv-opt" id="cnv-opt" class="cnv-opt">
                     <table class="decbinhex-ref-table">
-                        <caption>Decimal - Binary - Hexidecimal Reference</caption>
+                        <caption>Conversion Table Reference</caption>
                         <tr class="decimal-ref-row">
                             <th data-type="decimal">Base 10</th>
                             <th data-type="decimal">0</th>
@@ -77,9 +81,11 @@
                             <td data-type="hexidecimal">F</td>
                         </tr>
                     </table>
-            </div>
+                </div> <!-- Reference Table Wrapper ends-->
 
-            <div class="challenge-wrapper">
+            </div> <!-- Convert Table Wrapper ends -->
+
+            <div class="challenge-wrapper"> <!-- Challenge Wrapper  -->
                 <div class="challenge-value">
                     <span class="dec-value">23</span>
                 </div>
@@ -89,7 +95,7 @@
                 <div class="challenge-opt">
                     <button class="new-challenge-btn">New Challenge</button>
                 </div>
-            </div>
+            </div> <!-- Challenge ends -->
 
             <div class="octet">
                 <div class="octet-labels">
@@ -114,8 +120,7 @@
                     <input type="text" class="bin-entry bin-1" value="0">
                 </div>
             </div>
-
-        </div>
+        </div> <!-- Binary Convert ends -->
 
         <aside class="convert-side">
             <div class="calculator">
@@ -146,7 +151,7 @@
             </div>
         </aside>
 
-    </main>
+    </main> <!-- Content Wrapper Ends-->
     <footer>
         <p class="footer-text">
             Copyright <span class="year-text">2024</span>.

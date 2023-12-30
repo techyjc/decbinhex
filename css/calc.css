@@ -55,6 +55,8 @@
         "number0 function-dec function-eq function-mul";
 }
 
+
+
 .calc-btn, .calc-div {
     background-color: rgb(42, 42, 42);
     color: var(--inverse-text-col);
