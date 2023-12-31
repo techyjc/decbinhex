@@ -19,7 +19,7 @@
             <div class="conv-table-wrapper"> <!-- Convert Table Wrapper -->
             
                 <div class="reference-table-wrapper"> <!-- Reference Table Wrapper -->
-                    <label for="cnv-opt" class="cnv-btn"> Show Conversion Table</label>
+                    <label for="cnv-opt" class="cnv-label"> Show Conversion Table</label>
                     <input type="checkbox" name="cnv-opt" id="cnv-opt" class="cnv-opt">
                     <table class="decbinhex-ref-table">
                         <caption>Conversion Table Reference</caption>
@@ -86,38 +86,38 @@
             </div> <!-- Convert Table Wrapper ends -->
 
             <div class="challenge-wrapper"> <!-- Challenge Wrapper  -->
+                <div class="challenge-opt">
+                    <button class="new-challenge-btn">New Challenge</button>
+                </div>
                 <div class="challenge-value">
                     <span class="dec-value">23</span>
                 </div>
                 <div class="challenge-desc">
                     <span class="dec-desc">Convert this Decimal Value to Hexidecimal</span>
                 </div>
-                <div class="challenge-opt">
-                    <button class="new-challenge-btn">New Challenge</button>
-                </div>
             </div> <!-- Challenge ends -->
 
             <div class="octet">
                 <div class="octet-labels">
-                    <div class="bit-label bit-128">128</div>
-                    <div class="bit-label bit-64">64</div>
-                    <div class="bit-label bit-32">32</div>
-                    <div class="bit-label bit-16">16</div>
-                    <div class="bit-label bit-8">8</div>
-                    <div class="bit-label bit-4">4</div>
-                    <div class="bit-label bit-2">2</div>
-                    <div class="bit-label bit-1">1</div>
+                    <div><button class="bit-label bit-128">128</button></div>
+                    <div><button class="bit-label bit-64">64</button></div>
+                    <div><button class="bit-label bit-32">32</button></div>
+                    <div><button class="bit-label bit-16">16</button></div>
+                    <div><button class="bit-label bit-8">8</button></div>
+                    <div><button class="bit-label bit-4">4</button></div>
+                    <div><button class="bit-label bit-2">2</button></div>
+                    <div><button class="bit-label bit-1">1</button></div>
                 </div>
 
                 <div class="octet-entry">
-                    <input type="text" class="bin-entry bin-128" value="0">
-                    <input type="text" class="bin-entry bin-64" value="0">
-                    <input type="text" class="bin-entry bin-32" value="0">
-                    <input type="text" class="bin-entry bin-16" value="0">
-                    <input type="text" class="bin-entry bin-8" value="0">
-                    <input type="text" class="bin-entry bin-4" value="0">
-                    <input type="text" class="bin-entry bin-2" value="0">
-                    <input type="text" class="bin-entry bin-1" value="0">
+                    <div class="bin-entry bin-128">0</div>
+                    <div class="bin-entry bin-64">0</div>
+                    <div class="bin-entry bin-32">0</div>
+                    <div class="bin-entry bin-16">0</div>
+                    <div class="bin-entry bin-8">0</div>
+                    <div class="bin-entry bin-4">0</div>
+                    <div class="bin-entry bin-2">0</div>
+                    <div class="bin-entry bin-1">0</div>
                 </div>
             </div>
         </div> <!-- Binary Convert ends -->
@@ -146,8 +146,11 @@
                     <button class="calc-btn calc-funct btn-mul" value="*">x</button>
                 </div>
             </div>
-            <div class="calc_sum_log">
-            <p class="loghead">Calculator Log</p>
+            <div class="log_wrapper">
+                <p class="loghead" onclick="saveCalcLog();">Calculator Log</p>
+                <div class="calc_sum_log">
+                    <span class="Sum_1" data-sumid="1">9+7</span>
+                </div>
             </div>
         </aside>
 

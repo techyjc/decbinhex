@@ -148,37 +148,39 @@
 
 
 /* Calculator Log */
-
-.calc_sum_log .loghead {
-    background-color: var(--primary-site-col);
-    color:#fff;
-    font-size: 1rem;
-    margin: 0px;
-    padding: 5px;
-    position: sticky;
-    text-align: center;
-    top: 0;
-}
-
-.calc_sum_log {
-    background-color: #ffffca;
-    border: 2px solid lightgreen;
-    bottom: 0px;
+.log_wrapper {
+    background-color: aquamarine;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     margin: 1rem auto;
     min-height: 150px;
     position: relative;
-    /* overflow-y: scroll; */
+    bottom: 0px;
+}
+
+.loghead {
+    background-color: var(--primary-site-col);
+    color:#fff;
+    font-size: 1rem;
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+}
+
+.calc_sum_log {
+    background-color: #ffffca;
+    border: 2px solid lightgreen;
+    inset: 0px;
+    height: 100%;
     width: 300px;
 }
 
 .calc_sum_log span {
+    display: block;
     font-size: 1.2rem;
     padding: 0.3rem;
 }
-
 
 .calc_sum_log span:hover {
     background-color: lightgreen;

@@ -69,14 +69,21 @@ function check_user_input(value){
             break;
         case "=":
             mysum.push(calc_sum);
-            addElement(calc_sum);
+            add_CalcLog(calc_sum);
             calc_display.innerHTML = eval(calc_sum);
             return true;
     }
     return false;
 }
 
-function addElement(value) {
+function octetinputs() {
+    const bitinput = document.querySelectorAll('.bit-label');
+    bitinput.forEach(bitvalue => {
+        console.log(bitvalue);
+    });
+}
+
+function add_CalcLog(value) {
     // create a new div element
     const newSpan = document.createElement("span");
     newSpan.innerHTML = value;
@@ -87,9 +94,9 @@ function addElement(value) {
   }
 
 function getyear() {
-currentDate = new Date();
-year = currentDate.getFullYear();
-currentYear.innerHTML = year;
+    currentDate = new Date();
+    year = currentDate.getFullYear();
+    currentYear.innerHTML = year;
 }
 
 function new_challenge() {
@@ -106,9 +113,32 @@ function btn_challenge() {
     // calc_display.innerHTML = '0';
 }
 
+function saveCalcLog() {
+    let logvalues = [];
+    calc_log.childNodes.forEach((logentry) => {
+        let tempvalue=logentry.textContent.trim();
+        if(tempvalue != ""){
+            logvalues.push(logentry.textContent);
+        }
+    })
+    console.log(logvalues);
+    parsevalues(logvalues);
+}
+
+function parsevalues(entries) {
+   
+    // Put the object into storage
+    localStorage.setItem('CalcLog', JSON.stringify(entries));
+
+    // Retrieve the object from storage
+    var retrievedObject = localStorage.getItem('CalcLog');
+
+    console.log('retrievedCalcLog: ', JSON.parse(retrievedObject));
+}
+
 (function (result){
     new_challenge();
     calc();
     getyear();
-    
+    octetinputs()
 })();

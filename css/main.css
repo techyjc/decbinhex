@@ -4,9 +4,6 @@
 
 .reference-table-wrapper {
     background-color: var(--inverse-text-col);
-    /* border-left: 2px solid var(--primary-site-col);
-    border-right: 2px solid var(--primary-site-col);
-    border-bottom: 2px solid var(--primary-site-col); */
     padding-inline: 5px;
     padding-block: 5px;
     position: relative;
@@ -17,7 +14,7 @@
 
 .ref-conv-table {
     display: inline-block;
-    color: var(--inverse-text-col);
+    color: var(--neutral-col-100);
     background-color: var(--primary-site-col);
     padding: .5em 1em;
     position: relative;
@@ -49,20 +46,23 @@
 }
 
 .cnv-opt {
+    accent-color: var(--primary-site-col);
     display: inline-block;
     margin-top: 5px;
     position: relative;
+    outline: 1px solid var(--neutral-col-100);
 }
-.cnv-btn {
+
+.cnv-label {
     background-color: var(--primary-site-col);
     border-radius: 10px 0px 0px 10px;
-    color: var(--inverse-text-col);
+    color: var(--neutral-col-100);
     display: inline-block;
     margin-top: 5px;
     padding: 8px 15px 9px 15px;
 }
 
-.cnv-btn::after{
+.cnv-label::after{
     border-radius: 0px 10px 10px 0px;
     content: '';
     width: 45px;
@@ -73,29 +73,8 @@
     top: 10px;
 }
 
-.cnv-opt::before {
-    content: '';
-    width: 18px;
-    height: 18px;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    left: -3px;
-    top: -2px;
-    z-index: 1;
-}
-
 .cnv-opt:checked + .decbinhex-ref-table {
     display: table;
-}
-
-.cnv-opt:checked::before {
-    outline: var(--inverse-text-col) solid 3px;
-    width: 14px;
-    height: 14px;
-    background-color: var(--btn-hover-col);
-    left: -3px;
-    top: 0px;
 }
 
 .challenge-wrapper {
@@ -106,9 +85,9 @@
 
 .challenge-value {
     align-items: center;
-    background-color: var(--primary-site-col);
+    outline: 3px solid var(--accent-col-1);
     border-radius: 10px;
-    color: var(--inverse-text-col);
+    color: var(--accent-col-1);
     display: flex;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
@@ -116,7 +95,7 @@
     height: 50px;
     justify-content: center;
     margin-bottom: 1rem;
-    width: 120px;
+    width: 80px;
 }
 
 .challenge-desc {
@@ -148,7 +127,8 @@
 }
 
 .octet {
-    background-color: #ffd500;
+    background-color: var(--accent-col-1);
+    color: var(--inverse-text-col);
     border-radius: 10px;
     min-width: 640px;
     padding: 5px;
@@ -158,20 +138,36 @@
     display: flex;
 }
 
-.bit-label {
-    font-size: 1.4rem;
-    padding: 0.5rem 0.5rem;
-    text-align: center;
-    width: 100%;
+.octet-labels div{
     min-width: 80px;
+    padding: .2rem;
+    width: 100%;
 }
+
+.bit-label {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    color: var(--inverse-text-col);
+    font-size: 1.2rem;
+    min-width: 80px;
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+}
+
+.bit-label:hover {
+    background-color: var(--btn-hover-col);
+}
+
 
 .octet-entry {
     display: flex;
 }
 
 .bin-entry {
-    border: 2px solid #ffd500;
+    background-color: var(--neutral-col-100);
+    border: 4px solid var(--accent-col-1);
+    color: #000;
     border-radius: 5px;
     display: block;
     font-size: 1.4rem;
@@ -180,3 +176,7 @@
     text-align: center;
     width: 100%;
 }
+
+.bit-label:hover .octet .octet-entry .bin-entry {
+    background-color: pink;
+  }

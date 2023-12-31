@@ -5,9 +5,14 @@
 }
 
 :root {
-    --primary-site-col: #5393A2;
-    --inverse-text-col: #fff;
-    --btn-hover-col: #A25393;
+    --primary-site-col: hsl(191, 32%, 48%);
+    --inverse-text-col: hsl(0, 0%, 100%);
+    --neutral-col-100: hsl(0, 0%, 100%);
+    --neutral-col-200: hsl(0, 0%, 93%);
+    --btn-hover-col: hsl(281, 32%, 38%);
+    --accent-col-1: hsl(281, 32%, 48%);
+    --accent-col-2: hsl(341, 32%, 48%);
+    --ff: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .color-1 {color: #5393a2;}
@@ -23,8 +28,8 @@ html {
 }
 
 body {
-    background-color: #eee;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--neutral-col-200);
+    font-family: var(--ff);
     margin: 0px;
     min-width: 640px;
     position: relative;
