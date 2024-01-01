@@ -7,7 +7,8 @@ const challenge_btn = document.querySelector('.new-challenge-btn');
 var calc_sum = '';
 var calc_displaysum = '';
 var mysum = [];
-
+var selected_number_sys = 'dec';
+var calc_last_op = '';
 
 function calc() {
     calc_buttons.forEach(function (button) {
@@ -30,6 +31,8 @@ function calc_result(uservalue) {
             }
             calc_display.innerHTML = calc_displaysum;
         }
+    }else{
+        check_user_input('clear');
     }
 
 }
@@ -71,6 +74,7 @@ function check_user_input(value) {
             mysum.push(calc_sum);
             add_CalcLog(calc_sum);
             calc_display.innerHTML = eval(calc_sum);
+            calc_last_op = '=';
             return true;
     }
     return false;
@@ -85,7 +89,6 @@ function octetinputs() {
             } else {
                 e.target.innerHTML = 1;
             }
-
         });
     });
 }
@@ -99,7 +102,6 @@ function nibbleinputs() {
             } else {
                 e.target.innerHTML = 1;
             }
-
         });
     });
 }
@@ -140,24 +142,26 @@ function numbersystem() {
 function btn_challenge(option = 'dec') {
     const challenge_value = document.querySelector('.dec-value');
     challenge_value.innerHTML = '';
-    //
+    
     let ch_number = -1;
     ch_number = Math.floor(Math.random() * 255);
 
     if (option == 'dec') {
+        selected_number_sys = 'dec';
         challenge_value.innerHTML = ch_number;
     }
 
     if (option == 'bin') {
+        selected_number_sys = 'bin';
         bin_number = dec2bin(ch_number);
         challenge_value.innerHTML = bin_number;
     }
 
     if (option == 'hex') {
+        selected_number_sys = 'hex';
         let hexvalue = dec2hex(ch_number);
         // hexvalue.substring(3,4);
         challenge_value.innerHTML = hexvalue.substring(2, 4);
-        console.log(dec2hex(ch_number));
     }
 }
 
@@ -197,7 +201,7 @@ function parsevalues(entries) {
 }
 
 (function (result) {
-    btn_challenge();
+    btn_challenge('dec');
     calc();
     getyear();
     octetinputs()

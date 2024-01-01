@@ -170,21 +170,12 @@
     background-color: var(--btn-hover-col);
 }
 
+/* Octet */
+
 .octet {
     background-color: var(--accent-col-1);
     color: var(--inverse-text-col);
     border-radius: 10px;
-    min-width: 640px;
-    padding: 5px;
-}
-
-/* Octet */
-
-.octet {
-    background-color: var(--accent-col-4);
-    color: var(--inverse-text-col);
-    border-radius: 10px;
-    margin-top: 1em;
     min-width: 640px;
     padding: 15px;
     position: relative;
@@ -200,7 +191,7 @@
     width: 100%;
 }
 
-.octet-labels {
+.octet-labels, .octet-entry {
     display: flex;
 }
 
@@ -215,11 +206,6 @@
     flex: 1 1 80px;
 }
 
-.octet-entry {
-    display: flex;
-    align-content: space-between;
-}
-
 .bin-entry {
     background-color: var(--neutral-col-100);
     border: 1px solid var(--accent-col-1);
@@ -229,10 +215,8 @@
     height: 100%;
     outline: transparent;
     text-align: center;
-    flex-grow: 1;
+    flex: 1 1 80px;
 }
-
-
 
 .bin-entry:hover {
     background-color: var(--accent-col-5);
@@ -304,10 +288,9 @@
     border-radius: 10px;
     color: var(--inverse-text-col);
     font-size: 1.2rem;
-    min-width: 80px;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
     text-align: center;
-    width: 100%;
+    flex: 1 1 80px;
 }
 
 .divide-top{
@@ -322,18 +305,54 @@
 
 .nibble-entry {
     background-color: var(--neutral-col-100);
-    border: 1px solid var(--accent-col-1);
+    border: 1px solid var(--accent-col-3);
     color: #000;
     border-radius: 5px;
     display: block;
     font-size: 1.4rem;
     height: 100%;
-    outline: transparent;
     text-align: center;
-    width: 100%;
+    flex: 1 1 80px;
 }
 
 .guide-text {
     margin: 5px 2px;
     text-align: center;
+}
+.pophelp {
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    background-color: var(--neutral-col-100);
+    box-shadow: none;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+    left: 6px;
+    padding: 0px;
+    position: absolute;
+    top: 6px;
+    width: 25px
+}
+
+.pophelp span {
+    background-color: var(--neutral-col-100);
+    border: 3px solid var(--primary-site-col);
+    outline: 3px solid var(--neutral-col-100);
+    /* outline-offset: 1px; */
+    border-radius: 5px;
+    font-size: 0.8rem;
+    left: 35px;
+    padding: 0.5rem;
+    position: absolute;
+    top: -30px;
+    display: none;
+    width: 15rem;
+    z-index: 2;
+}
+
+.pophelp:hover > span {
+    display: block;
+    z-index: 2;
 }
