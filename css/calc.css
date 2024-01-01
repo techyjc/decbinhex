@@ -170,7 +170,7 @@
 
 .calc_sum_log {
     background-color: #ffffca;
-    border: 2px solid lightgreen;
+    border: 2px solid var(--primary-site-col);
     inset: 0px;
     height: 100%;
     width: 300px;

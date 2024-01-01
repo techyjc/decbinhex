@@ -83,6 +83,50 @@
     margin-top: 1rem;
 }
 
+.challenge-selection {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(1rem - 2px);
+    border: 2px var(--accent-col-4) solid;
+    border-radius: 10px;
+}
+
+.choices {
+    display: none;
+}
+
+.choices-label {
+    background-color: var(--primary-site-col);
+    border-radius: 10px;
+    color: var(--neutral-col-100);
+    display: inline-block;
+    margin: 0px 0.5rem;
+    padding: .6rem;
+    vertical-align: middle;
+    min-width: 100px;
+    min-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.choices-label:hover {
+    background-color: var(--btn-hover-col);
+}
+
+.dec-choice-conv:checked + .decimal-select {
+    background-color: var(--accent-col-3);
+}
+
+.bin-choice-conv:checked + .binary-select {
+    background-color: var(--accent-col-3);
+}
+
+.hex-choice-conv:checked + .hexidecimal-select {
+    background-color: var(--accent-col-3);
+}
+
+
 .challenge-value {
     align-items: center;
     outline: 3px solid var(--accent-col-1);
@@ -95,7 +139,7 @@
     height: 50px;
     justify-content: center;
     margin-bottom: 1rem;
-    width: 80px;
+    width: 140px;
 }
 
 .challenge-desc {
@@ -138,12 +182,6 @@
     display: flex;
 }
 
-.octet-labels div{
-    min-width: 80px;
-    padding: .2rem;
-    width: 100%;
-}
-
 .bit-label {
     background-color: transparent;
     border: none;
@@ -152,13 +190,9 @@
     font-size: 1.2rem;
     min-width: 80px;
     padding: 0.5rem 0.5rem;
+    text-align: center;
     width: 100%;
 }
-
-.bit-label:hover {
-    background-color: var(--btn-hover-col);
-}
-
 
 .octet-entry {
     display: flex;
@@ -166,7 +200,7 @@
 
 .bin-entry {
     background-color: var(--neutral-col-100);
-    border: 4px solid var(--accent-col-1);
+    border: 1px solid var(--accent-col-1);
     color: #000;
     border-radius: 5px;
     display: block;
@@ -177,6 +211,82 @@
     width: 100%;
 }
 
-.bit-label:hover .octet .octet-entry .bin-entry {
-    background-color: pink;
-  }
+.bin-entry:hover {
+    background-color: var(--accent-col-5);
+    color: var(--accent-col-2);
+    font-weight: bold;
+}
+
+.user-answer {
+    background-color: var(--accent-col-1);
+    border-radius: 10px;
+    color: var(--neutral-col-100);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: .5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.user-answer button {
+    background-color: var(--accent-col-3);
+    border-radius: 10px;
+    color: var(--neutral-col-100);
+    font-size: 1.2rem;
+    padding: .5rem;
+    vertical-align: middle;
+}
+
+.bin-user-value {
+    outline-color: var(--accent-col-2);
+    font-size: 1.2rem;
+    width: 400px;
+    vertical-align: middle;
+}
+
+
+.binary-nibble {
+    background-color: var(--accent-col-3);
+    color: var(--inverse-text-col);
+    border-radius: 10px;
+    margin-top: 1em;
+    min-width: 640px;
+    padding: 5px;
+}
+
+.nibble-labels, .binary-nibble-entries {
+    display: flex;
+}
+
+.nibble-label {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    color: var(--inverse-text-col);
+    font-size: 1.2rem;
+    min-width: 80px;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.divide-l {
+    border-left: 2px solid var(--neutral-col-100);
+}
+
+.nibble-entry {
+    background-color: var(--neutral-col-100);
+    border: 1px solid var(--accent-col-1);
+    color: #000;
+    border-radius: 5px;
+    display: block;
+    font-size: 1.4rem;
+    height: 100%;
+    outline: transparent;
+    text-align: center;
+    width: 100%;
+}
+
+.guide-text {
+    text-align: center;
+}

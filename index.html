@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,23 @@
     <link rel="stylesheet" href="css/calc.css">
     <script src="js/base.js" defer></script>
 </head>
-<body>        
+
+<body>
     <header>
         <h1 class="main-heading">Decimal | Binary | Hexidecimal</h1>
-    </header>  
+    </header>
     <main class="content-wrapper"> <!-- Content Wrapper -->
         <div class="binary-convert"> <!-- Binary Convert -->
 
             <div class="conv-table-wrapper"> <!-- Convert Table Wrapper -->
-            
+
                 <div class="reference-table-wrapper"> <!-- Reference Table Wrapper -->
                     <label for="cnv-opt" class="cnv-label"> Show Conversion Table</label>
                     <input type="checkbox" name="cnv-opt" id="cnv-opt" class="cnv-opt">
                     <table class="decbinhex-ref-table">
                         <caption>Conversion Table Reference</caption>
                         <tr class="decimal-ref-row">
-                            <th data-type="decimal">Base 10</th>
+                            <th data-type="decimal" data-label="row-heading">Base 10</th>
                             <th data-type="decimal">0</th>
                             <th data-type="decimal">1</th>
                             <th data-type="decimal">2</th>
@@ -43,7 +45,7 @@
                             <th data-type="decimal">15</th>
                         </tr>
                         <tr class="binary-ref-row">
-                            <td data-type="binary">Base 2</td>
+                            <td data-type="binary" data-label="row-heading">Base 2</td>
                             <td data-type="binary">0000</td>
                             <td data-type="binary">0001</td>
                             <td data-type="binary">0010</td>
@@ -62,7 +64,7 @@
                             <td data-type="binary">1111</td>
                         </tr>
                         <tr class="hexdec-ref-row">
-                            <td data-type="hexidecimal">Base 16</td>
+                            <td data-type="hexidecimal" data-label="row-heading">Base 16</td>
                             <td data-type="hexidecimal">0</td>
                             <td data-type="hexidecimal">1</td>
                             <td data-type="hexidecimal">2</td>
@@ -84,10 +86,17 @@
                 </div> <!-- Reference Table Wrapper ends-->
 
             </div> <!-- Convert Table Wrapper ends -->
-
+            <p>Select a Number System:</p>
             <div class="challenge-wrapper"> <!-- Challenge Wrapper  -->
-                <div class="challenge-opt">
-                    <button class="new-challenge-btn">New Challenge</button>
+                <div class="challenge-selection">
+                    <input id="dec-choice-conv" type="radio" name="ch_choices" class="choices dec-choice-conv" checked>
+                    <label for="dec-choice-conv" class="choices-label decimal-select">Decimal</label>
+
+                    <input id="bin-choice-conv" type="radio" name="ch_choices" class="choices bin-choice-conv">
+                    <label for="bin-choice-conv" class="choices-label binary-select">Binary</label>
+
+                    <input id="hex-choice-conv" type="radio" name="ch_choices" class="choices hex-choice-conv">
+                    <label for="hex-choice-conv" class="choices-label hexidecimal-select">Hexidecimal</label>
                 </div>
                 <div class="challenge-value">
                     <span class="dec-value">23</span>
@@ -97,16 +106,16 @@
                 </div>
             </div> <!-- Challenge ends -->
 
-            <div class="octet">
+            <div class="octet"><!-- Binary Convert -->
                 <div class="octet-labels">
-                    <div><button class="bit-label bit-128">128</button></div>
-                    <div><button class="bit-label bit-64">64</button></div>
-                    <div><button class="bit-label bit-32">32</button></div>
-                    <div><button class="bit-label bit-16">16</button></div>
-                    <div><button class="bit-label bit-8">8</button></div>
-                    <div><button class="bit-label bit-4">4</button></div>
-                    <div><button class="bit-label bit-2">2</button></div>
-                    <div><button class="bit-label bit-1">1</button></div>
+                    <div class="bit-label bit-128">128</div>
+                    <div class="bit-label bit-64">64</div>
+                    <div class="bit-label bit-32">32</div>
+                    <div class="bit-label bit-16">16</div>
+                    <div class="bit-label bit-8">8</div>
+                    <div class="bit-label bit-4">4</div>
+                    <div class="bit-label bit-2">2</div>
+                    <div class="bit-label bit-1">1</div>
                 </div>
 
                 <div class="octet-entry">
@@ -119,8 +128,45 @@
                     <div class="bin-entry bin-2">0</div>
                     <div class="bin-entry bin-1">0</div>
                 </div>
-            </div>
-        </div> <!-- Binary Convert ends -->
+                <p class="guide-text">Click the required bit value to change between 0 and 1. Add the decimal values
+                    above for each bit value of 1 to check your answer.</p>
+            </div><!-- Binary Convert ends -->
+
+            <!-- <div class="user-answer">
+                <label for="">Enter the Decimal/Binary Value:</label>
+                <input type="text" class="bin-user-value">
+                <button>Check the Answer</button>
+            </div> -->
+
+            <div class="binary-nibble"><!-- Binary-Nibble Convert -->
+                <div class="nibble-labels">
+                    <div class="nibble-label left-8">8</div>
+                    <div class="nibble-label left-4">4</div>
+                    <div class="nibble-label left-2">2</div>
+                    <div class="nibble-label left-1">1</div>
+                    <div class="nibble-label right-8">8</div>
+                    <div class="nibble-label right-4">4</div>
+                    <div class="nibble-label right-2">2</div>
+                    <div class="nibble-label right-1">1</div>
+                </div>
+
+                <div class="binary-nibble-entries">
+                    <div class="nibble-entry bin-128">0</div>
+                    <div class="nibble-entry bin-64">0</div>
+                    <div class="nibble-entry bin-32">0</div>
+                    <div class="nibble-entry bin-16">0</div>
+                    <div class="nibble-entry bin-8">0</div>
+                    <div class="nibble-entry bin-4">0</div>
+                    <div class="nibble-entry bin-2">0</div>
+                    <div class="nibble-entry bin-1">0</div>
+                </div>
+                <p class="guide-text">Click the required bit value to change between 0 and 1. Add the binary nibble
+                    values above for each bit value of 1, convert the relevant values to Hexideminal.</p>
+            </div><!-- Binary-Nibble Convert ends -->
+        </div>
+
+
+
 
         <aside class="convert-side">
             <div class="calculator">
@@ -133,7 +179,7 @@
                     <button class="calc-btn calc-num btn-num7" value="7">7</button>
                     <button class="calc-btn calc-num btn-num6" value="6">6</button>
                     <button class="calc-btn calc-num btn-num5" value="5">5</button>
-                    <button class="calc-btn calc-num btn-num4" value="4" >4</button>
+                    <button class="calc-btn calc-num btn-num4" value="4">4</button>
                     <button class="calc-btn calc-num btn-num3" value="3">3</button>
                     <button class="calc-btn calc-num btn-num2" value="2">2</button>
                     <button class="calc-btn calc-num btn-num1" value="1">1</button>
@@ -161,4 +207,5 @@
         </p>
     </footer>
 </body>
+
 </html>
