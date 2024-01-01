@@ -178,6 +178,28 @@
     padding: 5px;
 }
 
+/* Octet */
+
+.octet {
+    background-color: var(--accent-col-4);
+    color: var(--inverse-text-col);
+    border-radius: 10px;
+    margin-top: 1em;
+    min-width: 640px;
+    padding: 15px;
+    position: relative;
+}
+
+.octet::before {
+    content: 'Decimal Value';
+    font-weight: bold;
+    left: 10px;
+    position: absolute;
+    text-align: center;
+    top: 3px;
+    width: 100%;
+}
+
 .octet-labels {
     display: flex;
 }
@@ -188,14 +210,14 @@
     border-radius: 10px;
     color: var(--inverse-text-col);
     font-size: 1.2rem;
-    min-width: 80px;
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
     text-align: center;
-    width: 100%;
+    flex: 1 1 80px;
 }
 
 .octet-entry {
     display: flex;
+    align-content: space-between;
 }
 
 .bin-entry {
@@ -203,13 +225,14 @@
     border: 1px solid var(--accent-col-1);
     color: #000;
     border-radius: 5px;
-    display: block;
     font-size: 1.4rem;
     height: 100%;
     outline: transparent;
     text-align: center;
-    width: 100%;
+    flex-grow: 1;
 }
+
+
 
 .bin-entry:hover {
     background-color: var(--accent-col-5);
@@ -217,7 +240,11 @@
     font-weight: bold;
 }
 
-.user-answer {
+/* Octet End*/
+
+
+
+/* .user-answer {
     background-color: var(--accent-col-1);
     border-radius: 10px;
     color: var(--neutral-col-100);
@@ -235,7 +262,9 @@
     font-size: 1.2rem;
     padding: .5rem;
     vertical-align: middle;
-}
+} */
+
+
 
 .bin-user-value {
     outline-color: var(--accent-col-2);
@@ -251,7 +280,18 @@
     border-radius: 10px;
     margin-top: 1em;
     min-width: 640px;
-    padding: 5px;
+    padding: 15px;
+    position: relative;
+}
+
+.binary-nibble::before {
+    content: 'Nibble Value';
+    font-weight: bold;
+    left: 10px;
+    position: absolute;
+    text-align: center;
+    top: 3px;
+    width: 100%;
 }
 
 .nibble-labels, .binary-nibble-entries {
@@ -265,13 +305,19 @@
     color: var(--inverse-text-col);
     font-size: 1.2rem;
     min-width: 80px;
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
     text-align: center;
     width: 100%;
 }
 
-.divide-l {
-    border-left: 2px solid var(--neutral-col-100);
+.divide-top{
+    margin: 0px 6px;
+}
+
+.divide{
+    border-left: 1px solid var(--neutral-col-100);
+    border-right: 1px solid var(--neutral-col-100);
+    margin: 0px 4px;
 }
 
 .nibble-entry {
@@ -288,5 +334,6 @@
 }
 
 .guide-text {
+    margin: 5px 2px;
     text-align: center;
 }
