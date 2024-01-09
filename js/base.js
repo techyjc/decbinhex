@@ -3,6 +3,11 @@ const calc_display = document.querySelector(".calc-display");
 const calc_log = document.querySelector(".calc_sum_log")
 const currentYear = document.querySelector(".year-text");
 const challenge_btn = document.querySelector('.new-challenge-btn');
+const instruction = document.querySelector('.challenge-inst');
+
+const dec_challenge = ["d-b","d-h"];
+const bin_challenge = ["b-d","b-h"];
+const hex_challenge = ["h-b","h-d"];
 
 var calc_sum = '';
 var calc_displaysum = '';
@@ -149,12 +154,14 @@ function btn_challenge(option = 'dec') {
     if (option == 'dec') {
         selected_number_sys = 'dec';
         challenge_value.innerHTML = ch_number;
+        instruction.innerHTML = "Convert this Decimal Value to Hexidecimal";
     }
 
     if (option == 'bin') {
         selected_number_sys = 'bin';
         bin_number = dec2bin(ch_number);
         challenge_value.innerHTML = bin_number;
+        instruction.innerHTML = "Convert this Binary Value to Decimal";
     }
 
     if (option == 'hex') {
@@ -162,6 +169,7 @@ function btn_challenge(option = 'dec') {
         let hexvalue = dec2hex(ch_number);
         // hexvalue.substring(3,4);
         challenge_value.innerHTML = hexvalue.substring(2, 4);
+        instruction.innerHTML = "Convert this Hexidecimal Value to Decimal";
     }
 }
 
@@ -208,3 +216,4 @@ function parsevalues(entries) {
     nibbleinputs();
     numbersystem();
 })();
+

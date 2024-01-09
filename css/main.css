@@ -216,6 +216,23 @@
     outline: transparent;
     text-align: center;
     flex: 1 1 80px;
+    position: relative;
+}
+
+.bin-entry:hover::before {
+    content: 'Click to toggle between 1 and 0.';
+    background-color: hsla(0, 0%, 100%,0.8);
+    border: 1px solid #343434;
+    border-radius: 10px;
+    color: #222222;
+    font-size: 0.8rem;
+    font-weight: 400;
+    display: block;
+    padding: 10px 5px;
+    top: -90px;
+    left: 100px;
+    position: absolute;
+    width: 85px;
 }
 
 .bin-entry:hover {
@@ -312,8 +329,26 @@
     font-size: 1.4rem;
     height: 100%;
     text-align: center;
+    position: relative;
     flex: 1 1 80px;
 }
+
+.nibble-entry:hover::before {
+    content: 'Click to toggle between 1 and 0.';
+    background-color: hsla(0, 0%, 100%,0.8);
+    border: 1px solid #343434;
+    border-radius: 10px;
+    color: #222222;
+    font-size: 0.8rem;
+    font-weight: 400;
+    display: block;
+    padding: 10px 5px;
+    top: -90px;
+    left: 100px;
+    position: absolute;
+    width: 85px;
+}
+
 
 .guide-text {
     margin: 5px 2px;
